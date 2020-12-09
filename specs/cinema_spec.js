@@ -34,11 +34,11 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, ['Moonlight', 'Blade Runner 2049', 'Dunkirk', 'Black Panther', 'T2 Trainspotting']);   // (actual, expected)
   });
 
-
   
   it('should be able to find a film by title', function() {
     const actual = cinema.findFilmByTitle('Black Panther');
-    assert.deepStrictEqual(actual, [blackPanther]);   // (actual, expected)
+    //assert.deepStrictEqual(actual, [blackPanther]);   // if using .filter
+    assert.deepStrictEqual(actual, blackPanther);   // is using .find
   });
 
 
