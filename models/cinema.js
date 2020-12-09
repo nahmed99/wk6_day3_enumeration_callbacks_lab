@@ -89,4 +89,15 @@ Cinema.prototype.areAllFilmsLongerLength = function(length) {
 
 
 
+Cinema.prototype.totalLengthOfAllFilms = function() {
+  const result = this.films.reduce((runningTotal, film) => {
+    // return the films for matching genre
+    return runningTotal + film.length;  // from inside the callback
+  }, 0);
+
+  // boolean of whether no films for a certain year exist in film array
+  return result;    
+}
+
+
 module.exports = Cinema;
