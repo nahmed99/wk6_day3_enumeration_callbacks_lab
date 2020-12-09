@@ -13,4 +13,16 @@ Cinema.prototype.getFilmTitles = function() {
 }
 
 
+
+Cinema.prototype.findFilmByTitle = function(filmTitle) {
+  const result = this.films.filter((film) => {
+    // return the film that has matching title to the passed into this function
+    return filmTitle === film.title;  // from inside the callback
+  });
+
+  return result;    // This returns from getFilmTitles()
+
+}
+
+
 module.exports = Cinema;
